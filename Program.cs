@@ -11,7 +11,7 @@ namespace SearchAndSortTechnique
     {
         public static void Main(string[] args) 
         {
-            AnagramProgram Obj= new AnagramProgram();
+            AnagramString Obj= new AnagramString();
             Obj.anagram();
            
             Console.Read();
