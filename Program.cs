@@ -7,42 +7,25 @@ using System.Threading.Tasks;
 namespace SearchAndSortTechnique
 {
 
-    internal class Program
+    public  class Program
     {
-        static void Main(string[] args)
+       
+       
+        public static void Main(string[] args) 
         {
-            
-                        string[] arr = {"ABC", "XYZ",
-                "JKL", "DEF", "MNO"};
+            String[] arr = {  "Barela", "Subhash","zara", "Akash", "Ritesh", "Rajesh" };
 
-            Console.WriteLine("Original array");
-            foreach (string g in arr)
-            {
-                Console.WriteLine(g);
-            }
-
-            Console.WriteLine("\nAfter Sort");
-
+            InsertionSort obj =new InsertionSort();
+            obj.sort_sub(arr);
+            Console.ReadLine();
           
-            Array.Sort(arr);
-
-            foreach (string g in arr)
-            {
-                Console.WriteLine(g);
-            }
-
-            Console.WriteLine("\nBinarySearch for 'GHI':");
-
            
-            int index = Array.BinarySearch(arr, "GHI");
-
-          BinarySearch<String>. sort(arr, index);
-
         }
 
        
-       
     }
+
+    
 }
 
 
