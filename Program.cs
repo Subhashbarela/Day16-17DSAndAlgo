@@ -9,17 +9,19 @@ namespace SearchAndSortTechnique
 
     public  class Program
     {
-       
-       
         public static void Main(string[] args) 
         {
-            String[] arr = {  "Barela", "Subhash","zara", "Akash", "Ritesh", "Rajesh" };
-
-            InsertionSort obj =new InsertionSort();
-            obj.sort_sub(arr);
-            Console.ReadLine();
-          
-           
+            int []a = { 12, 31, 25, 8, 32, 17, 40, 42 };
+            int n = a.Length;
+            MergeSorting obj=new MergeSorting();
+            Console.WriteLine("Before sorting array elements are : \n");
+            obj.printArray(a, n);
+            obj.mergeSort(a, 0, n - 1);
+            Console.WriteLine("\n\nAfter sorting array elements are :\n");
+            obj.printArray(a, n);
+            Console.Read();
+            return;
+             
         }
 
        
