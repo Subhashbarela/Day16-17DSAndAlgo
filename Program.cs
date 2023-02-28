@@ -9,21 +9,19 @@ namespace SearchAndSortTechnique
 
     public  class Program
     {
-    public static void Main(string[] args)
+       public static void Main(string[] args)
         {
-            Console.WriteLine("Enter the range as you want to print prime number :");
-           
-            int range=Convert.ToInt32(Console.ReadLine());
-            Prime obj= new Prime();
-           
-            obj.primeFactor(range);
 
-      
-
-        Console.Read();
+            Prime obj = new Prime();
            
-             
-        }
+            Console.WriteLine("insert the  range :");
+            int range = Convert.ToInt32(Console.ReadLine());
+            obj.displayPrimePalindrome(range);
+
+            Console.Read();
+
+        }   
+        
 
        
     }

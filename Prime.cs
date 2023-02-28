@@ -8,27 +8,49 @@ namespace SearchAndSortTechnique
 {
     internal class Prime
     {
-      public void primeFactor(int range) {
-            int count;
+        public void displayPrimePalindrome(int range)
+        {
 
-            for (int i = 1; i <= range; i++)
+            int count = 0;
+
+            for (int i = 100; i <= range; i++)
             {
-                count = 0;
-                for (int j = 2; j <= i / 2; j++)
+
+                int num = i, revNum = 0;
+                while (num != 0)
                 {
-                    if (i % j == 0)
+                    int digit = num % 10;
+                    num /= 10;
+                    revNum = revNum * 10 + digit;
+                }
+
+
+                if (revNum == i)
+                {
+                    bool isPrime = true;
+                    for (int j = 2; j <= i / 2; j++)
                     {
+
+                        if (i % j == 0)
+                        {
+                            isPrime = false;
+                            break;
+                        }
+
+                    }
+                    if (isPrime)
+                    {
+                        Console.WriteLine(i + " ");
                         count++;
-                        break;
+                        if (count == 10)
+                        {
+                            Console.WriteLine();
+                            count = 0;
+                        }
                     }
                 }
-
-                if (count == 0)
-                {
-                    Console.WriteLine(i);
-                }
-
             }
+
         }
     }
 }
