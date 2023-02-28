@@ -9,12 +9,18 @@ namespace SearchAndSortTechnique
 
     public  class Program
     {
-        public static void Main(string[] args) 
+    public static void Main(string[] args)
         {
-            AnagramString Obj= new AnagramString();
-            Obj.anagram();
+            Console.WriteLine("Enter the range as you want to print prime number :");
            
-            Console.Read();
+            int range=Convert.ToInt32(Console.ReadLine());
+            Prime obj= new Prime();
+           
+            obj.primeFactor(range);
+
+      
+
+        Console.Read();
            
              
         }
